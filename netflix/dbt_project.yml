@@ -17,5 +17,8 @@ clean-targets:
 
 models:
   netflix:
-    staging:
-      +materialized: view
+    +materialized: view
+    dim:
+      +materialized: table
+    fact:
+      +materialized: table
